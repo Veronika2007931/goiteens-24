@@ -1,0 +1,10 @@
+const myName = 'veronika';
+const Age = 15;
+const surname = 'Niema';
+const nativeLanguidge = 'ukrainian';
+const whereiLive = 'Kiev region'; 
+let MyFriendName = 'Karina';
+let friendsAge = 15;
+let numberfamilyMembers = 3;
+let numberOfSchoolGrade =10;
+let nameOfMyCat ="funtic";
