@@ -18,24 +18,13 @@
 //     num += 1
 // }
 
-let heroName = '';
-while(heroName.length < 6){
-    heroName = prompt("Введіть ім'я героя")
-    console.log(heroName)
-    if(heroName >= 6){
-        // console.log('no')
-        break;
-    }
-    }
+// let heroName = '';
+// while(heroName.length < 6){
+//     console.log(heroName)
+//     heroName = prompt("Введіть ім'я героя")
+    
+   
+//     }
 
    
  
-
- 
-   
- 
-
-
-
-
-
