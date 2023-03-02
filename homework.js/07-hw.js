@@ -30,26 +30,22 @@
     //  let sum  = total
     // console.log(sum);
 
-const calculator = {
-    a: prompt('Add a number'),
-    b: prompt('Add a number'),
-    // read(a,b){
-      
-    // },
-    sum(){
-        const values = Object.values(calculator);
-       return values[0]+values[1];
-    },
-    mult(){
-        a*b
+const obj = {
+    a: null,
+    b: null,
+    read(a,b){
+        this.a = prompt('Введіть число')
+        this.b = prompt('Введіть число')
+       
+        console.log(a);
+        console.log(b);},
+        
     }
-}
 
-
-// calculator.read()
-console.log(calculator.sum())
-// calculator.mult()
-
+    // const val = Object.values(obj);
+    //     console.log(val)
+     
+obj.read()
 // const cafe= {
 //     name: 'Republick',
 //     width:200,
