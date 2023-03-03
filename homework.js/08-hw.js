@@ -12,20 +12,26 @@ const players = [
   
   ];
   
-  
+  console.table(players);
+function multyply(a){
+  if(players.id === a){
+      // players.timePlayed: players.timePlayed + 10;
+  }
+}
 
+multyply('player-3')
 
-  const playerIdToUpdate = players.map(function(nameN){
+//   const playerIdToUpdate = players.map(function(id){
 
     
-    if(players.id === nameN){
+//     if(players.id === nameN){
        
-        timePlayed: players.timePlayed + 10;
-    }
-})
+//         timePlayed: players.timePlayed + 10;
+//     }
+// })
    
 // const playerIdToUpdate = 'player-3';
-// console.table(players);
+
 // console.table(playerIdToUpdate);
 
 // { name: '🍎', price: 50 }
@@ -85,7 +91,7 @@ const cart = {
   };
 
 
-cart()
+// cart()
 
 
 
