@@ -127,7 +127,7 @@ const players = [
     { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
     { id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true },
   ];
-//   console.table(players);
+  console.table(players);
 
 
 // const playersName = players.map(function(player){
@@ -146,6 +146,7 @@ const updatePlayers= players.map(function(player){
     }
 })
 
+console.table(updatePlayers);
 
 
 
