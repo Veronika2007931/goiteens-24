@@ -12,27 +12,17 @@ const players = [
   
   ];
   
-  console.table(players);
-function multyply(a){
-  if(players.id === a){
-      // players.timePlayed: players.timePlayed + 10;
-  }
-}
+  const playerIdToUpdate = 'player-3';
 
-multyply('player-3')
-
-//   const playerIdToUpdate = players.map(function(id){
-
-    
-//     if(players.id === nameN){
-       
-//         timePlayed: players.timePlayed + 10;
-//     }
-// })
-   
-// const playerIdToUpdate = 'player-3';
-
-// console.table(playerIdToUpdate);
+  players.map((player) => {
+   if(playerIdToUpdate === player.id){
+       return{
+        ...player,
+        timePlayed: player.timePlayed += 100
+       }
+   }
+})
+// console.table(players)
 
 // { name: '🍎', price: 50 }
 
@@ -76,9 +66,9 @@ const cart = {
     },
 
     remove(productName) {
-             
+        
 
-    },
+},
 
     clear() {},
 
@@ -89,10 +79,15 @@ const cart = {
     decreaseQuantity(productName) {},
 
   };
+  cart.add({ name: '🍎', price: 50 })
+  cart.add({ name: '🍇', price: 70 })
+  cart.add({ name: '🍋', price: 60 }) 
+  cart.add({ name: '🍓', price: 110 })
 
+  console.log(cart.items)
 
-// cart()
-
+  cart.remove('🍎')
+  console.log(cart.items)
 
 
 
