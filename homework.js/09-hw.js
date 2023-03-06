@@ -85,24 +85,36 @@ obj=  [
     },
   ];
 
-
+  // №1
   const getUserNames = obj.map(users => {
    return users.name
   });
   
-//   console.log(getUserNames);
+  // console.log(getUserNames );
   
-
-  const getUsersWithEyeColor = obj.filter((users, color) => {
+  // №2
+  const getUsersWithEyeColor =function(color) {
+   return obj.filter((users) => {
    if(users.eyeColor === color){
-            users.name
+            return users.name
     };
     
-  });
+  })};
   
-//   console.log(getUsersWithEyeColor(users, 'blue')); // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
+  // console.log(getUsersWithEyeColor('blue')); // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
+  
+  // №3
+  const getUsersWithGender = function(gender){
+    return obj.filter((users)=> {
+      if(users.gender === gender){
+        return users.name
+      }
+    })
+  };
+  
+  console.log(getUsersWithGender('male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
-
+// №4
 const getInactiveUsers = obj.filter (users => {
        if(users.isActive === false){
        return users.name
@@ -110,8 +122,17 @@ const getInactiveUsers = obj.filter (users => {
     //  посмотреть на записи что ето за имя котрое мы возврвщаэм
   }).map(({name}) => name);
   
-  console.log(getInactiveUsers); 
+  // console.log(getInactiveUsers); 
 
+// №7
+const doubledNuts = obj.map(name=> {
+  return name.balance
+})
+const calculateTotalBalance = doubledNuts.reduce((users,number) => {
+  return users += number 
+},0);
+
+// console.log(calculateTotalBalance);
 
 
 
