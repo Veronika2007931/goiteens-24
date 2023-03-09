@@ -112,7 +112,7 @@ obj=  [
     })
   };
   
-  console.log(getUsersWithGender('male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+  // console.log(getUsersWithGender('male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
 // №4
 const getInactiveUsers = obj.filter (users => {
@@ -123,6 +123,34 @@ const getInactiveUsers = obj.filter (users => {
   }).map(({name}) => name);
   
   // console.log(getInactiveUsers); 
+
+// №5
+const getUserWithEmail =  function(email){
+  return obj.filter((users)=> {
+    if(users.email === email){
+      return users.name
+    }
+  })
+};
+
+// console.log(getUserWithEmail('shereeanthony@kog.com')); 
+// console.log(getUserWithEmail( 'elmahead@omatom.com'));
+
+// №6
+const getUsersWithAge = function(min, max){
+      return obj.filter((users)=>{
+      if(min<=users.age,users.age<=max){
+        return users.name
+      }
+      
+    })
+};
+
+console.log(getUsersWithAge( 20, 30)); // [об'єкт Ross Vazquez, об'єкт Elma Head, об'єкт Carey Barr]
+
+console.log(getUsersWithAge( 30, 40));
+// [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Blackburn Dotson, об'єкт Sheree Anthony]
+
 
 // №7
 const doubledNuts = obj.map(name=> {
