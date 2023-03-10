@@ -146,9 +146,9 @@ const getUsersWithAge = function(min, max){
     })
 };
 
-console.log(getUsersWithAge( 20, 30)); // [об'єкт Ross Vazquez, об'єкт Elma Head, об'єкт Carey Barr]
+// console.log(getUsersWithAge( 20, 30)); // [об'єкт Ross Vazquez, об'єкт Elma Head, об'єкт Carey Barr]
 
-console.log(getUsersWithAge( 30, 40));
+// console.log(getUsersWithAge( 30, 40));
 // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Blackburn Dotson, об'єкт Sheree Anthony]
 
 
@@ -162,7 +162,17 @@ const calculateTotalBalance = doubledNuts.reduce((users,number) => {
 
 // console.log(calculateTotalBalance);
 
+// №8
+const getUsersWithFriend = function(friendName) {
+    return obj.filter(users => {
+      if(users.friends.includes(friendName)){
+        return users.name
+      }
+    })
+};
 
+// console.log(getUsersWithFriend( 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
+console.log(getUsersWithFriend( 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
 
 
 
