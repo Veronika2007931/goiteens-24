@@ -97,20 +97,18 @@ obj=  [
    return obj.filter((users) => {
    if(users.eyeColor === color){
             return users.name
-    };
+    }
     
   })};
   
   // console.log(getUsersWithEyeColor('blue')); // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
   
   // №3
-  const getUsersWithGender = function(gender){
-    return obj.filter((users)=> {
+  const getUsersWithGender = (gender)=> obj.filter((users)=> {
       if(users.gender === gender){
         return users.name
       }
-    })
-  };
+  }).map(({name}) => name);
   
   // console.log(getUsersWithGender('male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
@@ -126,12 +124,12 @@ const getInactiveUsers = obj.filter (users => {
 
 // №5
 const getUserWithEmail =  function(email){
-  return obj.filter((users)=> {
+  return obj.find((users)=> {
     if(users.email === email){
-      return users.name
+      return users
     }
   })
-};
+}
 
 // console.log(getUserWithEmail('shereeanthony@kog.com')); 
 // console.log(getUserWithEmail( 'elmahead@omatom.com'));
@@ -139,11 +137,11 @@ const getUserWithEmail =  function(email){
 // №6
 const getUsersWithAge = function(min, max){
       return obj.filter((users)=>{
-      if(min<=users.age,users.age<=max){
+      if(min<=users.age && users.age<=max){
         return users.name
       }
       
-    })
+    }).map(({name}) => name)
 };
 
 // console.log(getUsersWithAge( 20, 30)); // [об'єкт Ross Vazquez, об'єкт Elma Head, об'єкт Carey Barr]
@@ -163,16 +161,14 @@ const calculateTotalBalance = doubledNuts.reduce((users,number) => {
 // console.log(calculateTotalBalance);
 
 // №8
-const getUsersWithFriend = function(friendName) {
-    return obj.filter(users => {
+const getUsersWithFriend = (friendName) =>  obj.filter (users => {
       if(users.friends.includes(friendName)){
         return users.name
       }
-    })
-};
+    }).map(({name}) => name);
 
 // console.log(getUsersWithFriend( 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
-console.log(getUsersWithFriend( 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
+// console.log(getUsersWithFriend( 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
 
 
 
