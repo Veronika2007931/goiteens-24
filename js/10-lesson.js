@@ -53,7 +53,7 @@ const numbers = [1, 9, 6, 2, 3]
 // console.log('numbers', numbers)
 const letters = ['b', 'B', 'a', 'A']
 // letters.sort()
-console.log('letters',letters)
+// console.log('letters',letters)
 numbers.sort((nextEl, curEl)=>{
     // console.log('curEl', curEl)
     // console.log('nextEl', nextEl)
@@ -101,9 +101,12 @@ const arr = [
     { name: "Lise", surname: "Meitner", born: 1878, dead: 1968, id: 11 },
     { name: "Hanna", surname: "Hammarström", born: 1829, dead: 1909, id: 12 }
     ];
-
-    const  newArr = [...arr].sort((prevName, nextName)=>{
-       return prevName.name > nextName.name
+    const newA = arr.map(users => {
+        return users.name
+       });
+    //    console.log(newA)
+    const  newArr = newA.sort((prevName, nextName)=>{
+       return prevName > nextName
     })
 
 
