@@ -85,15 +85,27 @@ obj=  [
     },
   ];
 
-  const getNamesSortedByFriendsCount = [...obj].sort((prevLendth, nextLendth)=>{
-       return prevLendth.friends.lendth > nextLendth.friends.lendth
-   })
+  // const getNamesSortedByFriendsCount2 = [...obj].sort((prevLendth, nextLendth)=>{
+  //      return prevLendth.friends.lendth - nextLendth.friends.lendth
+  //  })
  
+   const getNamesSortedByFriendsCount = (users) => {
+    return users.sort((userA, userB) => {
+      return userA.friends.lendth - userB.friends.lendth
+    })
+   };
   
-  console.log(getNamesSortedByFriendsCount);
+  console.log(getNamesSortedByFriendsCount(obj));
   // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
 
-
+  const getSortedUniqueSkills = [...obj].flatMap(users => users.skills).sort()
+  
+  
+  // console.log(getSortedUniqueSkills);
+  // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 
+  // 'ex', 'ipsum', 'irure', 'laborum', 
+  // 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 
+  // 'proident', 'tempor', 'velit', 'veniam' ]
 
 
 
