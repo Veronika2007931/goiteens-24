@@ -55,3 +55,6 @@ if(mainTextEl.classList.contains('paragraph')){
 }
 
 
+
+
+
