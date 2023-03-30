@@ -95,13 +95,31 @@ obj=  [
     })
    };
   
-  console.log(getNamesSortedByFriendsCount(obj));
+  // console.log(getNamesSortedByFriendsCount(obj));
   // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
 
-  const getSortedUniqueSkills = [...obj].flatMap(users => users.skills).sort()
-  
-  
-  // console.log(getSortedUniqueSkills);
+//   const getSortedUniqueSkills = [...obj].flatMap(users => users.skills).sort()
+//   const getSortedUniqueSkills2 = getSortedUniqueSkills.map(users => {
+//     if(users.skills === users.skills){
+//       continue;
+
+//     }
+// })
+const getSortedUniqueSkills = users => {
+  return users
+.reduce((skills, user ) => {skills.push(...user.skills)
+return skills
+},[])
+.filter((skill, index, arr) => {
+console.log('index', index)
+console.log('arr.indexOf(skills:', arr.indexOf(skill))
+})
+};
+
+
+
+
+  console.log(getSortedUniqueSkills);
   // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 
   // 'ex', 'ipsum', 'irure', 'laborum', 
   // 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 
