@@ -84,42 +84,18 @@ obj=  [
       age: 39,
     },
   ];
-
-  // const getNamesSortedByFriendsCount2 = [...obj].sort((prevLendth, nextLendth)=>{
-  //      return prevLendth.friends.lendth - nextLendth.friends.lendth
-  //  })
- 
-   const getNamesSortedByFriendsCount = (users) => {
-    return users.sort((userA, userB) => {
-      return userA.friends.lendth - userB.friends.lendth
-    })
-   };
-  
-  // console.log(getNamesSortedByFriendsCount(obj));
+// №9
+  const getNamesSortedByFriendsCount =  [...obj].sort((userA, userB) =>  userA.friends.length - userB.friends.length).map((user)=> user.name)
+    
+  console.log(getNamesSortedByFriendsCount);
   // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
 
-//   const getSortedUniqueSkills = [...obj].flatMap(users => users.skills).sort()
-//   const getSortedUniqueSkills2 = getSortedUniqueSkills.map(users => {
-//     if(users.skills === users.skills){
-//       continue;
-
-//     }
-// })
-const getSortedUniqueSkills = users => {
-  return users
-.reduce((skills, user ) => {skills.push(...user.skills)
-return skills
-},[])
-.filter((skill, index, arr) => {
-console.log('index', index)
-console.log('arr.indexOf(skills:', arr.indexOf(skill))
-})
-};
+  // №10
+  const getSortedUniqueSkills = [...obj].flatMap(users => users.skills).sort()
+  .filter((skill, index, arr) => arr.indexOf(skill) === index);
 
 
-
-
-  console.log(getSortedUniqueSkills);
+  //  console.log(getSortedUniqueSkills);
   // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 
   // 'ex', 'ipsum', 'irure', 'laborum', 
   // 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 
