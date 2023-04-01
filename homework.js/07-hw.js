@@ -31,21 +31,36 @@
     // console.log(sum);
 
 const obj = {
-    a: null,
-    b: null,
+    a: 0,
+    b: 0,
     read(a,b){
         this.a = prompt('Введіть число')
         this.b = prompt('Введіть число')
        
-        console.log(a);
-        console.log(b);},
-        
+        console.log(a)
+        console.log(b)},
+     
     }
 
     // const val = Object.values(obj);
     //     console.log(val)
      
 obj.read()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const cafe= {
 //     name: 'Republick',
 //     width:200,
@@ -53,7 +68,12 @@ obj.read()
 //     personal:5,
 //     hr: true }
 
-//     const entries = Object.entries(cafe);
+//     
+
+
+
+
+// const entries = Object.entries(cafe);
 // console.log(entries);
 
 // const values = Object.values(cafe);
