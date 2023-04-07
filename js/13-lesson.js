@@ -59,6 +59,9 @@
 
 
 
+
+// ПЕРЕДИВИТИСЬ ЦЕЙ МОМЕНТ !!!!!
+
 const backdrop = document.querySelector('.js-backdrop');
 const openBtn = document.querySelector('[data-action = "open-modal"');
 const closeBtn = document.querySelector('[data-action = "close-modal"');
