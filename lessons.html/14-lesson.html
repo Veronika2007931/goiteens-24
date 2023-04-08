@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/13-lesson.css">
+</head>
+<body>
+    <label>
+        Ім'я
+        <input type="text" class="js-input" />
+      </label>
+  
+      <p>
+        <label>
+          <input type="checkbox" class="js-license" />
+          Приймаю умови договору
+        </label>
+      </p>
+  
+      <button type="submit" disabled class="js-button">
+        Зареєструватися як <span>Анонім</span>
+      </button>
+
+      <button class="js-clear">Очистити</button>
+    <p class="output js-output"></p>
+
+    <button class="button" data-action="open-modal">Відкрити модалку</button>
+    <div class="backdrop js-backdrop">
+        <div class="modal">
+          <h2>Modal window</h2>
+          <p>
+            In user interface design for computer applications, a modal window is
+            a graphical control element subordinate to an application's main
+            window. It creates a mode that disables the main window but keeps it
+            visible, with the modal window as a child window in front of it. Users
+            must interact with the modal window before they can return to the
+            parent application. This avoids interrupting the workflow on the main
+            window. Modal windows are som
+          </p>
+          <button type="button" class="button" data-action="close-modal">
+            Закрити
+          </button>
+        </div>
+      </div>
+  
+</body>
+<script src="../js/14-lesson.js"></script>
+</html>
