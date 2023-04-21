@@ -18,9 +18,24 @@
 
 // openBtn.addEventListener('click', openModal)
 
+// №3
 
+const passwordEl = prompt ("Введіть пароль");
+const form = document.querySelector("form");
+console.log(passwordEl)
+form.addEventListener("submit", handleSubmit);
 
+function handleSubmit(event){
+    event.preventDefault();
 
-
-
-
+     const name = event.currentTarget.elements.name.value
+     const password = event.currentTarget.elements.password.value
+     console.log(password)
+    // if(passwordEl === password){
+    //     alert(`Вітаємо ${name} Вхід авторизовано!`)
+    // }else {
+    //     alert(`Неправильний пароль`)
+    // }
+    
+    
+}
