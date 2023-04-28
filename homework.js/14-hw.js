@@ -1,24 +1,39 @@
 // №5
-const inputEl = document.querySelector('input')
-const spanEl = document.querySelector('#name-output')
 
-const value = inputEl.value
-console.log(value)
+// const spanEl = document.querySelector('#name-output')
+// const getValue = document.getElementById('name-input');
 
+// getValue.addEventListener("input", changeSpan)
 
-
-
-
-
+// function changeSpan(event){
+//     spanEl.textContent = event.currentTarget.value;
+// }
 
 
+// #6
+
+// const inputEl = document.querySelector('#validation-input')
+
+// document.getElementById("validation-input").onblur = function(){
+//     if(this.getAttribute('data-length') > this.value.length ){
+//         this.classList.remove('valid');
+//         this.classList.add('invalid');
+//     }else{
+//         this.classList.remove('invalid');
+//         this.classList.add('valid');
+//     }
+//  }
+
+// #7
+
+const inputEl = document.getElementById('font-size-control')
+const textEl = document.getElementById('text')
+// const value = inputEl.value
 
 
-
-
-
-
-
+inputEl.addEventListener('input', () => {
+   textEl.style.fontSize = inputEl.value + "px";
+})
 
 
 
